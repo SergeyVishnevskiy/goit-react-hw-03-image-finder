@@ -38,14 +38,12 @@ class App extends Component {
             images: [...images],
             warning: false,
             loader: false,
-            inputValue: "",
           });
         } else {
           this.setState({
             warning: true,
             images: [],
             loader: false,
-            inputValue: "",
           });
         }
       });
@@ -59,7 +57,7 @@ class App extends Component {
 
   loadImages = async (resetPages) => {
     if (this.state.inputValue) {
-      this.setState({
+      await this.setState({
         loader: true,
       });
       let { inputValue, pageNumber, perPage } = this.state;
@@ -87,7 +85,7 @@ class App extends Component {
   loadMore = async () => {
     try {
       this.loadImages(false).then(async (images) => {
-        this.setState((prevState) => ({
+        await this.setState((prevState) => ({
           pageNumber: prevState.pageNumber + 1,
           images: [...prevState.images, ...images],
           loader: false,
