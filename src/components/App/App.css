@@ -1,0 +1,13 @@
+.App {
+  display: inline-block;
+  padding-bottom: 24px;
+}
+
+.center {
+  width: 100px;
+  margin: 0 auto;
+}
+.message {
+  color: red;
+  text-align: center;
+}
