@@ -38,6 +38,7 @@ class App extends Component {
             images: [...images],
             warning: false,
             loader: false,
+            inputValue: "",
           });
         } else {
           this.setState({
