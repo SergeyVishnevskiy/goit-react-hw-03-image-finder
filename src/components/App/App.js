@@ -45,6 +45,7 @@ class App extends Component {
             warning: true,
             images: [],
             loader: false,
+            inputValue: "",
           });
         }
       });
